@@ -78,5 +78,5 @@ local.properties
 .travis/deploy_rsa
 .travis/deploy_rsa.pub
 
-application.properties
-configprops.properties
+src/main/resources/application.properties
+src/main/resources/configprops.properties

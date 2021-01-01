@@ -29,7 +29,13 @@
 
 ## Building the project
 
-1. Replace the respective properties in the application.properties file
+1. Create the copies of the properties files
+    ```
+     cp src/main/resources/application.properties.example src/main/resources/application.properties
+     cp src/main/resources/configprops.properties.example src/main/resources/configprops.properties
+    ```
+
+2. Replace the respective properties in the application.properties file
     ```
      vim src/main/resources/application.properties  
     ```
@@ -38,20 +44,20 @@
    - `${DB_USERNAME}` - Database name 
    - `${DB_PASSWORD}` - Database name 
 
-1. Add a random String as the webhook key in configprops.properties file
+3. Add a random String as the webhook key in configprops.properties file
    ```
      vim src/main/resources/configprops.properties  
    ```
     replace `${WEBHOOK_KEY}` key with your random string. 
-2. Build the project using maven
+4. Build the project using maven
     ```
     mvn clean install
     ```
-3. Run the generated jar file
+5. Run the generated jar file
     ```
      java -jar target/sef-github-leaderboard-1.5.9.RELEASE.jar
     ```
-4. Access the UI by visiting `http://localhost:9090/`
+6. Access the UI by visiting `http://localhost:9090/`
 
 ## Setting up the webhook
 
